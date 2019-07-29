@@ -1,9 +1,11 @@
+## Random Variable
+- A random variable is a deterministic function that maps a single value from the sample space to the real line
+	- 𝑋 : Ω → ℝ
+
 ## Expectation
-- The expected value of a random variable is a population parameter, which is also a random variable
-- The expected value of an unbiased estimator is the population parameter
-- Although the expected value refers to a random variable (which is a function), it can sometimes (incorrectly) be referred to as the output of some random function [i.e. f(x)] once a sample has been realized
-	- Where f is typically a parameter (which is a random variable)
-	- And x is a sample (i.e. data)
+- The expected value of a random variable is equal to some population parameter
+- We use unbiased estimators to estimate a population parameter associated with a random variable
+- Also, the expected value of an unbiased estimator is the population parameter
 - A correct way of calculating the output of some parameter could be written as: mu(x) instead of E[X]
 
 ## Prediction
@@ -39,7 +41,6 @@
 	- As your sample size grows larger and larger, an estimator is thought to converge to the population parameter
 - An estimator is a random variable for the same reason that a statistic is a random variable
 	- Therefore, it has a distribution inherited from its original random variable (i.e. X), similar to a statistic
-	- The expected value of 
 - Example: mu-hat is an estimator of mu
 - Example: X-bar is an estimator of mu if X is normally distributed
 - An estimator is consistent if it converges to the population parameter as the sample size grows
@@ -48,7 +49,7 @@
 ## Point Estimate
 - A point estimator is another name for an estimator
 	- In other words, a point estimator is a random variable
-- A point estimate refers to the actual data value associated with an estimator or statistic
+- A point estimate refers to the actual data value output by an estimator or statistic
 	- In other words, a point estimate is some constant (or fixed value)
 - Mathematically, a point estimate refers to the output of an estimator
 - Example: Given x-bar=5, we can say that x-bar is a statistic and 5 is the point estimate

@@ -1,3 +1,7 @@
+## Stochasticity
+- A stochastic process is a sequence of random variables
+	- It’s common to write the successive random variables S0, S1, ...St, ...Sn, which all belong to the same function. Therefore, the space each of these random variables lives over is the same, and when we need to talk about that space, then we’ll talk about S, and realizations will be s
+
 ## Determinism
 - Determinism is a property of a process (i.e. function, system, experiment, etc.)
 	- Processes are either deterministic or stochastic
@@ -11,7 +15,7 @@
 - For example, a coin toss may not be considered to be random if we knew the coin's initial orientation, the impact point between my finger and the coin, the turbulence in the air, the surface smoothness of the table the coin lands on, the material characteristics of the coin and the table, and so on.
         - We would be able to definitively say whether the coin would come up heads or tails.
 
-## Stochasticity and Randomness
+## The Relationship of Stochasticity and Randomness
 - Stochasticity and randomness are roughly synonymous in meaning
 - The main difference between the two notions seems to be stricly contextual
 - We typically describe variables as random and a process as stochastic

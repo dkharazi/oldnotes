@@ -65,3 +65,4 @@
 - http://www.columbia.edu/~ww2040/4106S11/lec0125.pdf
 - http://bactra.org/prob-notes/srl.pdf
 - https://stats.stackexchange.com/questions/246047/independent-variable-random-variable
+- http://www.phdeconomics.sssup.it/documents/Lesson3.pdf
