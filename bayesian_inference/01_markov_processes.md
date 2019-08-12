@@ -11,6 +11,5 @@ for all values si and any increasing sequence of times ti
 
 ## Random Walks
 
-
 ## References
 - http://bactra.org/prob-notes/srl.pdf
