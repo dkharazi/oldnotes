@@ -1,5 +1,6 @@
 ## Definition
-- Represents a function that maps a single value from the sample space to a realization that is any single real number
+- A random variable is a deterministic function that maps a single value from the sample space to the real line
+- Said a different way, a random variable represents a function that maps a single value from the sample space to a realization that is any single real number
         - Mathematically, defined as X: Ω → ℝ such that ω ↦ X(ω)
                 - Where ω∈Ω and X(ω)∈ℝ
                 - Ω is a set that represents the domain of the random variable function

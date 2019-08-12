@@ -1,10 +1,21 @@
+## Elements and Sets
+- A set is made up of elements
+- Since an element can be a set, then a set can contain other sets as well
+- Examples:
+	- A is a valid set if A = {1,2,3}, since 1, 2, and 3 are all valid elements of a set
+	- B is a valid set if B = {1,2,{3,4}}, since 1, 2, and {3, 4} are all valid elements of a set
+	- C is a valid set if C = {'red','blue','green'}, since the colors 'red', 'blue', and 'green' are all valid elements of a set
+- An element is some type of object, which can be an individual number, word, or even a set
+	- For example, {3,4} is an element of the set {1,2,{3,4}}
+	- For example, {'a','b'} is an element of the set {{'a','b'},'c'}
+
 ## Set Notation
 - A set is a unique sequence of observable outcomes (e.g. {1,2,3,4,5,6} for a roll of a single die)
 - An event is a set of outcomes that is written as a capital letter (e.g. A)
 - A random variable is a function that is written as a capital, italicized letter 
 - A realization is an observed outcome that is written as a lower-case, italicized letter
 
-## Random Variable
+## Random Variables
 - Represents a function that maps a single value from the sample space to a realization that is any single real number
 	- Mathematically, defined as X: Ω → ℝ such that ω ↦ X(ω)
 		- Where ω∈Ω and X(ω)∈ℝ
