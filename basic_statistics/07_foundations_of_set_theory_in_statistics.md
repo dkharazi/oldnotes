@@ -70,6 +70,14 @@
 - Example of alternative definition of realization
 	- X(s) ≡ X((i, j)) = i + j
 
+## Further Notation
+- We can write {an element} ∈ {a set}, or {a set} ∈ {a collection of sets}
+        - For example, we can write a∈A, where A is an event (which is a set) and a is an outcome/realization of A
+        - For example, we can also write A∈𝓕, where A is an event (which is a set) and 𝓕 is an algebra (which is a collection of sets)
+- We can write {a set} ⊂ {a set}, or {a collection of sets} ⊂ {a collection of sets}
+        - For example, we can write A⊂B, where A and B are both events (which are sets)
+        - For example, we can also write 𝓕 0 ⊂ 𝓕 1, where 𝓕 0 is an algebra (which is a collection of sets) that is contained within an algebra 𝓕 1 (which is larger a collection of sets)
+
 ## Reference
 - https://en.wikipedia.org/wiki/List_of_mathematical_symbols
 - https://math.stackexchange.com/questions/240673/what-exactly-is-a-random-variable
