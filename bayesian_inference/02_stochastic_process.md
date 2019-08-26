@@ -28,3 +28,4 @@
 - http://bactra.org/prob-notes/srl.pdf
 - https://www.quora.com/Is-dice-rolling-a-deterministic-or-stochastic-process
 - http://axon.cs.byu.edu/Dan/252/misc/252-Markov_chains.pdf
+- https://web.ma.utexas.edu/users/gordanz/notes/introduction_to_stochastic_processes.pdf

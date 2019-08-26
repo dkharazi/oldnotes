@@ -50,7 +50,24 @@
         - We then say that Sn is a Markov process.
 - The analogous condition for continuous time is P(S(tn+1) = sn+1|S(tn) = sn) = P(S(tn+1) = sn+1|S(tn) = sn, S(tn−1) = sn−1, . . . S(t1) = s1) for all values si and any increasing sequence of times ti
 
-## Example of a Markov Chain in relation to Weather
+## Example: Markov Chain in relation to Weather
+- A Markov Chain with a State Space S={Sunny, Rainy} has a transition matrix:
+	- P=[    S   R ]
+	    [S  .9  .1 ]
+	    [R  .5  .5 ]
+- Say we wanted to calculate the probability of the weather in two days from today being sunny, and we know that the weather today is sunny:
+	- We need to calculate P(1st day is sunny->sunny and 2nd day is sunny->sunny) = 0.9*0.9 = 0.81
+	- We need to calculate P(1st day is sunny->rainy and 2nd day is rainy->sunny) = 0.1*0.5 = 0.05
+	- Then P(Sunny 2 days from now) = 0.9*0.9 + 0.1*0.5 = 0.81*0.05 = 0.86
+- Mathematically, we could write the above situation as:
+	- Let an event A={SS,SR,RS,RR} represent a set of possible weather transitions from one day to another
+		- Where SS = a day of sunny weather where the previous day was also sunny
+		- Where SR = a day of rainy weather where the previous day was sunny
+		- Where RS = a day of sunny weather where the previous day was rainy
+		- Where RR = a day of rainy weather where the previous day was also rainy
+	- Calculate the probability P(SS,SS)
+	- Calculate the probability P(SR,RS)
+	- Calculate the probability P(Second day is sunny) = P(SS,SS) + P(SR,RS)
 
 ## Example of a Markov Chain in relation to the Stock Market
 
@@ -63,10 +80,10 @@
 
 ## References
 - http://bactra.org/prob-notes/srl.pdf
-- https://web.ma.utexas.edu/users/gordanz/notes/introduction_to_stochastic_processes.pdf
 - https://medium.com/@rohitpandey576/coin-toss-markov-chains-7995cb303406
 - https://people.math.osu.edu/husen.1/teaching/571/markov_1.pdf
 - http://setosa.io/blog/2014/07/26/markov-chains/
 - https://en.wikipedia.org/wiki/Markov_chain
 - http://people.brunel.ac.uk/~mastjjb/jeb/or/moremk.html
 - https://www.math.drexel.edu/~jwd25/LM_SPRING_07/lectures/Markov.html
+- https://stats.stackexchange.com/questions/165/how-would-you-explain-markov-chain-monte-carlo-mcmc-to-a-layperson 
