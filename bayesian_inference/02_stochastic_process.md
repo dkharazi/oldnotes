@@ -7,7 +7,7 @@
 ## Difference between Stochasticity and Determinism
 - Determinism is any process that isn't stochastic, or doesn't involve an element of randomness
 - In a stochastic process, we are interested in a "best guess"
-- In a deterministic process, we are interested in an "exact solution"
+- In a deterministic process, we are interested in a "consistent solution"
 - A deterministic process can be determined by an exact formula, whereas a stochastic process can't be determined by an exact formula and involves "guessing"
 
 ## Examples of Deterministic Processes

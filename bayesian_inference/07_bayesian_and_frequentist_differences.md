@@ -1,5 +1,5 @@
 ## Relation between Bayesian Inference and Markov Chain 
-- Transition matrix represents
+- likelihood represents transition matrix
 - prior represents state
 - posterior represents converged steady-state
 

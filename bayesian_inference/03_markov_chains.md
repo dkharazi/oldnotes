@@ -9,8 +9,8 @@
 	- Supports the Markov Property or "memorylessness"
 		- The outcome of a random variable depends only on the previously observed outcome of that random variable
 	- The probabilities (associated with each transition between other state) are constant over time
-- Since the probabilities of each state are constant over time, then we only ever need to know the previous outcome
-	- That is, the next state is only conditional on the present state of the system, since its past states are considered to be independent of the next state
+- Since we assume independence of any previous observations, we can consider the conditional probabilities of each state to be fixed
+	- Specifically, the next state is only conditional on the present state of the system, since its past states are considered to be independent of the next state
 	- Said another way, the next observation is only conditional on the current observation of a random variable, since its past observations are considered to be independent of the next observation 
 - The Markov Property doesn't usually apply to systems within the real world, so we wouldn't expect our predictions to be very accurate
 	- However, running the Markov chain for thousands of iterations typically provides us with a good long-run prediction
@@ -21,13 +21,13 @@
 
 ## Basic Theory of Markov Chains
 - A Markov Chain is a probabilistic model of a stochastic process
+- Every Markov Chain can be represented using a transition matrix, a state vector, and a steady-state vector
 - The "Markov" part refers to the model's use of the Markov property
 	- Specifically, the transition matrix is usable only because of the Markov property
 - The "Chain" part refers to running many iterations of the model by re-inputting the previous model's output over and over again
 	- Specifically, we input an initial state vector, receive some output from the model (by multiplying the transition matrix and the state vector together), and re-input the output over and over again until the state vector converges, which we call our steady-state vector
 	- Mathematically, we keep running the model until Mx_s = x_s, or in other words until the input equals the output, i.e. the state vector equals the steady-state vector
-- The goal of a Markov Chain is to iterate until we receive a steady-state vector 
-- A Markov Chain can be represented using a transition matrix, a state vector, and a steady-state vector
+- The goal of a Markov Chain is to keep iterating until we receive a steady-state vector that converges
 
 ## Definiton of Markov Chains
 - Rows represent the "from" or "current" state
@@ -59,7 +59,7 @@
 ## Why use a Markov Chain
 - If we use a Markov Chain, we don't need to keep track of a bunch of dependent variables with respect to some independent variable
 - Instead, we only need to keep track of the history of one independent variable (and the index, which is typically a date)
-- Then, we can calculate the conditional probabilities for each state (or unique observation) given its previous state (or previous observation)
+	- Then, we can calculate the conditional probabilities for each state (or unique observation) given its previous state (or previous observation)
 
 ## References
 - http://bactra.org/prob-notes/srl.pdf
