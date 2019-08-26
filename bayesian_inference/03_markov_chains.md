@@ -15,7 +15,7 @@
 - The Markov Property doesn't usually apply to systems within the real world, so we wouldn't expect our predictions to be very accurate
 	- However, running the Markov chain for thousands of iterations typically provides us with a good long-run prediction
 
-## Example of a Markov Process using Weather
+## Example: Markov Process in relation to Weather
 - Let's assume that on a given day it is more likely to rain if it rained the day before than if it didn't, and likewise it is more likely to be sunny if it was sunny the day before
 - If we can express the probability of it raining on Tuesday as a function of the weather on Monday (without taking Sunday into account), that means that even though every day might be dependant on everything that preceded it (in fact it does, since the weather on Monday doesn't actually affect the weather on Tuesday, rather they both stem from the quite complex meteorological conditions, and those don't tend to just shift in unexpected directions), in practice we can consider only a small amount of data when predicting the weather (instead of processing the whole history of the area for every day)
 
@@ -50,29 +50,6 @@
         - We then say that Sn is a Markov process.
 - The analogous condition for continuous time is P(S(tn+1) = sn+1|S(tn) = sn) = P(S(tn+1) = sn+1|S(tn) = sn, S(tn−1) = sn−1, . . . S(t1) = s1) for all values si and any increasing sequence of times ti
 
-## Example: Markov Chain in relation to Weather
-- A Markov Chain with a State Space S={Sunny, Rainy} has a transition matrix:
-	- P=[    S   R ]
-	    [S  .9  .1 ]
-	    [R  .5  .5 ]
-- Say we wanted to calculate the probability of the weather in two days from today being sunny, and we know that the weather today is sunny:
-	- We need to calculate P(1st day is sunny->sunny and 2nd day is sunny->sunny) = 0.9*0.9 = 0.81
-	- We need to calculate P(1st day is sunny->rainy and 2nd day is rainy->sunny) = 0.1*0.5 = 0.05
-	- Then P(Sunny 2 days from now) = 0.9*0.9 + 0.1*0.5 = 0.81*0.05 = 0.86
-- Mathematically, we could write the above situation as:
-	- Let an event A={SS,SR,RS,RR} represent a set of possible weather transitions from one day to another
-		- Where SS = a day of sunny weather where the previous day was also sunny
-		- Where SR = a day of rainy weather where the previous day was sunny
-		- Where RS = a day of sunny weather where the previous day was rainy
-		- Where RR = a day of rainy weather where the previous day was also rainy
-	- Calculate the probability P(SS,SS)
-	- Calculate the probability P(SR,RS)
-	- Calculate the probability P(Second day is sunny) = P(SS,SS) + P(SR,RS)
-
-## Example of a Markov Chain in relation to the Stock Market
-
-## Example of a Markov Chain in relation to a Random Walk
-
 ## Why use a Markov Chain
 - If we use a Markov Chain, we don't need to keep track of a bunch of dependent variables with respect to some independent variable
 - Instead, we only need to keep track of the history of one independent variable (and the index, which is typically a date)
@@ -86,4 +63,3 @@
 - https://en.wikipedia.org/wiki/Markov_chain
 - http://people.brunel.ac.uk/~mastjjb/jeb/or/moremk.html
 - https://www.math.drexel.edu/~jwd25/LM_SPRING_07/lectures/Markov.html
-- https://stats.stackexchange.com/questions/165/how-would-you-explain-markov-chain-monte-carlo-mcmc-to-a-layperson 
