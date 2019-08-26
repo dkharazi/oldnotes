@@ -1,16 +1,18 @@
 ## Notation within Statistical Mechanics
 - A state refers to a unique observation of some system
-- A system refers to a collection of random variables, which includes the states i and j (as an independent and dependent random variable)
+- A system refers to a collection of random variables, which includes the future state i and current state j
+	- The states i and j are essentially thought of as independent and dependent random variables, respectively
 
 ## Markov Process
 - A Markov process is a stochastic process that has the following properties:
-	- The number of possible unique outcomes (or states) is finite
-	- The Markov Property/"Memorylessness": The outcome of a random variable depends only on the previously observed outcome of that same random variable
-	- The probabilities are constant over time
+	- The number of distinct possible outcomes (or states) is finite
+	- Supports the Markov Property or "memorylessness"
+		- The outcome of a random variable depends only on the previously observed outcome of that random variable
+	- The probabilities (associated with each transition between other state) are constant over time
 - Since the probabilities of each state are constant over time, then we only ever need to know the previous outcome
-	- That is, the next state is only conditional on the present state of the system, since its past states are independent of the next state
-	- Said another way, the next observation is only conditional on the current observation of a random variable, since its past observations are independent of the next observation 
-- The Markov Property doesn't usually apply to the real world, so we wouldn't expect our predictions to be very accurate
+	- That is, the next state is only conditional on the present state of the system, since its past states are considered to be independent of the next state
+	- Said another way, the next observation is only conditional on the current observation of a random variable, since its past observations are considered to be independent of the next observation 
+- The Markov Property doesn't usually apply to systems within the real world, so we wouldn't expect our predictions to be very accurate
 	- However, running the Markov chain for thousands of iterations typically provides us with a good long-run prediction
 
 ## Example of a Markov Process using Weather
@@ -21,11 +23,11 @@
 - A Markov Chain is a probabilistic model of a stochastic process
 - The "Markov" part refers to the model's use of the Markov property
 	- Specifically, the transition matrix is usable only because of the Markov property
-- The "Chain" part refers to running many iterations of the model by re-inputting the output of the model over and over again
-	- Specifically, we input an initial state vector, receive some output from the model (multiplying the transition matrix and the state vector), and re-input the output over and over again until the state vector converges, which we call our steady-state vector
-	- Mathematically, we keep running the model until Mx_s = x_s, or in other words until the input state vector equals the steady-state vector
+- The "Chain" part refers to running many iterations of the model by re-inputting the previous model's output over and over again
+	- Specifically, we input an initial state vector, receive some output from the model (by multiplying the transition matrix and the state vector together), and re-input the output over and over again until the state vector converges, which we call our steady-state vector
+	- Mathematically, we keep running the model until Mx_s = x_s, or in other words until the input equals the output, i.e. the state vector equals the steady-state vector
 - The goal of a Markov Chain is to iterate until we receive a steady-state vector 
-- A Markov Chain involves a transition matrix, a state vector, and a steady-state vector
+- A Markov Chain can be represented using a transition matrix, a state vector, and a steady-state vector
 
 ## Definiton of Markov Chains
 - Rows represent the "from" or "current" state
