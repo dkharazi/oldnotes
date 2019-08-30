@@ -22,7 +22,6 @@
 - The posterior distribution for these parameters is intractable, since we cannot compute the integrals analytically in a high dimensional space
 - Therefore, most advocate one of the two methods:
 	1. Variational Inference
-		-
 		- This seems to be the preferred method for getting fast and accurate results in most software implementations
 	2. MCMC Methods
 		- These have the benefit of being unbiased and easy understand
