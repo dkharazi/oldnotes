@@ -5,6 +5,7 @@
 	- And P(D|H) is the likelihood distribution, which represents the data
 - Includes an element of subjectivity, otherwise known as a prior belief, built into probabilities
 - The data is fixed, and parameters are considered to be random variables
+	- In other words, Bayesians think of a distribution as describing our beliefs about a parameter
 
 ## Bayesian vs. Frequentist Inference
 - Essentially, frequentists are concerned with uncertainty in the data, whereas Bayesians are concerned with uncertainty in the parameters
