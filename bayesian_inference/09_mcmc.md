@@ -1,5 +1,6 @@
 ## Model Description
 - MCMC methods are used to approximate the posterior distribution of a parameter of interest by random sampling in a probabilistic space
+	- The posterior distribution can be thought of as a kind of average of the prior and likelihood distributions
 - We can determine a posterior distribution by:
 	1. Using conjugate distributions (i.e. conjugate prior)
 		- The prior and likelihood distributions rarely match up perfectly, so we usually aren't able to work with conjugate distributions
@@ -24,7 +25,7 @@
 
 ## General Description of the MCMC algorithm
 1. Generate a random parameter value to consider, and continue to generate random parameter values for many iterations (this is the Monte Carlo part)
-2. Compute the posterior (joint) probability of observing the pair of randomly-generated parameter values (this is the Bayes theorem part)
+2. Compute the posterior (joint) probability of observing the pair of randomly-generated parameter values by combining the prior and lilelihood distributions (this is the Bayes theorem part)
 3. Determine if the randomly-generated parameter value is better than the previous better value (this is the Metropolis-Hastings part, or some other method for evaluation)
 4. If the pair of randomly-generated parameter values is better than the last one, then it is added to the chain of parameter values (this is the Markov chain part)
 
