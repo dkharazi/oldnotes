@@ -33,6 +33,10 @@
 	- If our sample size is decently large, then our sample standard deviation has some effect on our estimates
 	- If our sample size is infinitely large, then our sample standard deviation doesn't really have an effect on our estimates 
 
+## Source of Inaccuracies in Estimates
+- Sampling error is one source of inaccurate estimates
+- Bias can be a greater source of inaccurate estimates
+
 ## References
 - https://en.wikipedia.org/wiki/Errors_and_residuals
 - https://en.wikipedia.org/wiki/Sampling_error
