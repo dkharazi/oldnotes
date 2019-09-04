@@ -26,6 +26,15 @@
 ## General Description of the MCMC algorithm
 1. Generate a random parameter value to consider, and continue to generate random parameter values for many iterations (this is the Monte Carlo part)
 2. Compute the posterior (joint) probability of observing the pair of randomly-generated parameter values by combining the prior and lilelihood distributions (this is the Bayes theorem part)
+	- More specifically, the likelihood equals the joint probability of observing the parameter of interest (w.r.t. the data)
+	- And the prior equals the joint probability of observing the parameters together
+	- Example: We want to estimate the conditional mean μ, which is represented by some posterior distribution μ~Posterior(mu,sd|X)
+		- We know that X represents our data, and mu = β0+β1*X
+		- So, we can rewrite the representation of the posterior distribution as μ~Posterior(β0,β1,σ|X)
+		- We know that our likelihood equals the joint probability (or likelihood) of observing the data given the parameters β0, β1, and σ
+			- Therefore, P(X|β0,β1,σ) = dnorm(data=μ_1,mean=β0+β1*x_1,sd=σ) * dnorm(data=μ_2,mean=β0+β1*x_2,sd=σ) * ... * dnorm(data=μ_n,mean=β0+β1*x_n,sd=σ)
+		- We know that our prior equals the joint probability (or likelihood) of observing the parameters β0, β1, and σ
+			- Therefore, P(β0,β1,σ) = dnorm(data=β0,mean=**some mean we decide**, sd=**some sd we decide**) * dnorm(data=β1,mean=**some mean we decide**, sd=**some sd we decide**) * dnorm(data=σ,mean=**some mean we decide**, sd=**some sd we decide**)
 3. Determine if the randomly-generated parameter value is better than the previous better value (this is the Metropolis-Hastings part, or some other method for evaluation)
 4. If the pair of randomly-generated parameter values is better than the last one, then it is added to the chain of parameter values (this is the Markov chain part)
 
