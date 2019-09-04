@@ -18,18 +18,20 @@
 	- (xi - x-bar) is the equation of a residual
 
 ## Sampling Error
-- In plain English, the sampling error refers to error caused by observing a sample instead of the entire population
+- In plain English, the sampling error refers to error (in our estimates) caused by observing a sample instead of the entire population
 - Sampling error is a property of an estimator
-- The sampling error is influenced by our sample size
-	- The more data we receive, the smaller our errors becomes
-	- As our errors become smaller, the impact of estimating the errors using residuals becomes extremely marginal
+- The sampling error is influenced by our sample size and sample standard deviation
+	- The more data we receive, the smaller our errors become
+	- Said another way, as our errors become smaller, the impact of estimating the errors using residuals becomes extremely marginal
 
 ## Standard Error
-- The standard error is the standard deviation of the outcomes of an estimator
-	- In other words, the standard error is used to quantify the amount of uncertainty around our point estimate
+- The standard error is a measure of sampling error
+	- More specifically, the standard error is used to quantify the amount of uncertainty around our point estimate
+	- Mathematically, the standard error is the standard deviation of the outcomes of an estimator
 - The standard error is a property of an estimator
-- The standard error is influenced by our sample size and the standard deviation of our random variable
-	- Mathematically, the standard error is the square root of the variance
+- The accuracy of our estimates depends on our sample standard deviation and our sample size, and our sample standard deviation is typically considered to be fixed while our sample size can change easily
+	- If our sample size is decently large, then our sample standard deviation has some effect on our estimates
+	- If our sample size is infinitely large, then our sample standard deviation doesn't really have an effect on our estimates 
 
 ## References
 - https://en.wikipedia.org/wiki/Errors_and_residuals
