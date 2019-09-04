@@ -7,6 +7,14 @@
 - The data is fixed, and parameters are considered to be random variables
 	- In other words, Bayesians think of a distribution as describing our beliefs about a parameter
 
+## Semi-Bayesian Inference
+- MAP estimation involves optimization (of parameters), whereas MCMC is a sampling method (of the posterior distribution of parameters)
+	- This is because MAP estimates are point estimates, whereas Bayesian methods are characterized by the use of distributions to summarize data and draaw inferences
+	- Thus, Bayesian methods tend to report the posterior mean or median along with credible intervals
+- MAP estimates can be computed using conjugate priors
+	- However, the posterior, prior, or likelihood distributions will rarely have a closed-form (pdf) function
+	- In this case, we would prefer MCMC techniques over simple MAP estimates
+
 ## Bayesian vs. Frequentist Inference
 - Essentially, frequentists are concerned with uncertainty in the data, whereas Bayesians are concerned with uncertainty in the parameters
 - Frequentists believe:
@@ -20,6 +28,11 @@
 		- If the prior is a uniform distribution, then the bayesian probabilities be the same as frequentist probabilities for some parameter
 	2. Observed data is considered fixed values, but the model parameters are random variables
 		- i.e. the parameters are represented using distributions
+
+## Different Examples of Inference
+- Example of Bayesian statistics: MCMC simulation
+- Example of Frequentist statistics: ML estimation
+- Example of Semi-Bayesian statistics: MAP estimation
 
 ## Relevance of MCMC in Dynamics 
 - The likelihood distribution represents the transition matrix
