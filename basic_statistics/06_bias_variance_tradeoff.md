@@ -1,10 +1,18 @@
-## Error and Bias
-- Bias and variance typically refer to the errors associated with an estimator
-- Irreducible error typically refers to the error provided by a (population) random variable
-	- Error is a property of a random variable
+## Makeup of Error
+- Error is made up of bias, variance, and irreducible error
+	- Error(X) = Bias^2 + Variance + Irreducible Error
+- True value refers to either a parameter or random variable
+- Error can be thought of as the difference between our true value and any observed values
+	- Typically, our true value is some population parameter
+- Bias can be thought of as the difference between our true value and its predicted value
+	- Typically, our true value is some population parameter, and our predicted value is some estimate
+- Variance can be thought of as the difference between our predicted value and the average predicted value
+	- Typically, our predicted value is some estimate, and our average predicted value represents the predicted value across many different samples
+- Irreducible error can be thought of as the remaining error that comes from our inability to account for every variable in the world that may have some marginal effect on our response (or random variable of interest)
+	- Irreducible error is defined as the variance of the error provided by the true value (or random variable)
 
 ## Properties of Estimators
-- Biasedness
+- Unbiasedness
 	- An estimator is unbiased if the expected value of the error term is 0
 	- Relates to bias in the bias-variance tradeoff concept
 	- An unbiased estimator can be a good indication that we will receive a low training error in the bias-variance tradeoff
@@ -12,17 +20,20 @@
 	- An estimator is consistent if our parameter estimate converges to the true parameter as n → ∞
 	- Relates to variance in the bias-variance tradeoff concept
 	- A consistent estimator can be a good indication that we will receive a low variance in the bias-variance tradeoff
+- To summarize, unbiasedness and consistency are not equivalent concepts
+        - Unbiasedness is a statement about the expected value of the sampling distribution of the estimator
+        - Consistency is a statement about "where the sampling distribution of the estimator is going" as the sample size increases
 
 ## Bias-Variance Tradeoff
 1. Bias
-        - Bias of an estimator is associated with training error
-        - High training error/bias leads to underfitting
+        - Bias of an estimator can be adjusted, specifically by observing training error
+        - High bias and low variance leads to underfitting
         - Bias is caused by systematic or statistical errors
         - Specific sources of bias include:
                 - A lack of training data (sampling error of the training set)
                 - Too few features in our training data
-                - Flaws in the model
-                        - Example: we may need to train the data on a more complicated model or an entirely different model altogether
+                - Choosing and overly simple or complex model
+		- Hyper-parameter tuning can cause overfitting by trying to fit sample too well
                 - Flaws in the modeling process
                         - Example: we may not be using the proper equations correctly
                         - Example: we may need to decrease regularization
@@ -32,9 +43,10 @@
                 - Flaws in determing the best way to measure some variable of interest
                         - Example: we may correctly measure some imperfect proxy for what we're really interested in, but will still receive poor accuracies, since we are measuring an imperfect proxy to begin with
 2. Variance
-        - Variance of an estimator is associated with testing/cross-validation error
-        - High testing error/variance leads to overfitting
+        - Variance of an estimator can be adjusted, specifically by observing the testing/cross-validation error
+        - Low bias and high variance leads to overfitting
         - Variance is caused by overall sampling error or mistaking noise for signal during the training portion of our modeling process
+	- Hyper-parameter tuning
         - Specific sources of variance include:
                 - A lack of testing/overall data (overall sampling error)
                 - Too many features in our training data

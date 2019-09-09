@@ -1,10 +1,10 @@
 ## Introduction to Errors
-- An error is the difference between an observed value and its population parameter
+- An error is the difference between a population parameter and its observed value
 	- The population parameter is typically fixed and unobserved
 		- For example, we usually don't know the population mean in research
 		- But sometimes in very general cases, we do in fact know the the population mean, such as the mean height in a population of 21-year-old men
 		- Thus, errors are almost always theoretical and unobservable
-- A residual is the difference between an observed and its estimated value
+- A residual is the difference between an estimated parameter and its observed value
         - Residuals are estimates of the true errors
         - Residuals are empirical and observable
 - For example: the sample mean could serve as a good estimator of the population mean
