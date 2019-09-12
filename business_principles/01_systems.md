@@ -1,5 +1,5 @@
 ## CRM
-- A system that achieves customer relationship management
+- A system that achieves customer relationship management, which is geared more towards sales teams
 - Geared toward front-office activities
 - Oriented toward customers
 - Focuses on increasing sales
@@ -9,6 +9,11 @@
     - Customer Service
     - Community Management
     - Social Media Management
+
+## ESP
+- A system that achieves email services provision, which is geared more towards digital marketing teams
+- Serves as an access point for email marketing campaigns
+- Designated for marketing campaigns involving things like A/B testing, etc.
 
 ## OMS
 - A system that achieves an order management system
