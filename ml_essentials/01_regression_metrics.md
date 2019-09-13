@@ -1,3 +1,6 @@
+## What is a metric?
+- A quantitative measurement
+
 ## MSE
 
 ## RMSE
