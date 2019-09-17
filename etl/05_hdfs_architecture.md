@@ -27,15 +27,14 @@
 ## DataNodes
 - Almost every HDFS node within its cluster has a single DataNode running on its node
 - A DataNode is responsible for managing any file storage on the node it runs on
-- A DataNode will handle and perform any instruction from the NameNode, such as reading, writing, deletion, and replication of the blocks on its node
-
----- DataNodes also contain NodeManagers, ApplicationMasters, and containers
----- DataNodes perform some transformation (i.e. MapReduce jobs) on containers
+- More specifically, a file is split into one or more blocks, and these blocks are stored in DataNodes
+- A DataNode will perform any read/write instruction sent from the NameNode, and will perform any block deletion/replication operation as well
+	- However, a DataNode is not capable of performing any transformations, since transformations (i.e. MapReduce jobs) are managed by YARN rather than HDFS
 
 ## Summary
 - A client will send a request to a NameNode on a cluster
 - The NameNode will then send that request to the appropriate DataNodes by analyzing the filesystem tree and metadata
-- The DataNodes will then fulfill the request by performing the appropriate transformation
+- The DataNodes will then fulfill the request by performing the appropriate read or write instruction
 - In other words, the NameNode will manage the client's requests, and the DataNodes will then process those requests
 
 ## References
@@ -43,3 +42,4 @@
 - https://www.slideshare.net/cloudera/introduction-to-yarn-and-mapreduce-2
 - https://data-flair.training/blogs/data-block/
 - https://stackoverflow.com/questions/23922878/what-is-the-meaning-of-namespace-and-metadata-which-were-used-in-hdfsnamenode
+- https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html
