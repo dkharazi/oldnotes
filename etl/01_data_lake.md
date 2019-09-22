@@ -6,6 +6,8 @@
 	- Emails
 	- Images (as blobs)
 	- Videos
+- Data lakes and data warehouses are conceptual types of data storage, whereas databases and file systems re implementations or instances of those conceptual models
+- For example, we can implement a data lake (or data warehouse) with a file system (i.e. HDFS) or database, which could be a relational database, object-oriented database, document-based database
 
 ## Properties of Data Lakes
 - General purpose: Stores raw data that will be transformed and loaded into a data warehouse later

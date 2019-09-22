@@ -5,6 +5,15 @@
 	- Provides access of files via a computer network
 - A distributed file system is either managed locally or remotely
 
+## Difference between File Systems and Database
+- File systems imply storage of unstructured, unrelated data
+- Databases imply storage of structured, related data
+- Databases (or DBMS) have more overhead compared to file systems
+- File systems tend to be more lightweight, since they aren't structured and don't have as much overhead
+- For example, databases have schemas and built in operations for indexing, retrieving, and searching for data; whereas file systems do not have any of this overhead
+- The data files in databases are formatted in its own way to provide querying capabilities (and other features of the system)
+- The data files in a file system are formatted in its original, raw format
+
 ## Examples of locally managed distributed file systems:
 - HDFS (HDFS can be managed remotely as well with additional configurations)
 - Ceph
