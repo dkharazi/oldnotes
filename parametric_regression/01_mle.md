@@ -1,4 +1,4 @@
-## General Summary of Maximum Likelihood Estimation
+## General Description
 - Maximum likelihood estimation is a method of estimating the parameters of a distribution by maximizing its likelihood function
 - The output parameters are called the maximum likelihood estimates
 - MLE can be seen as a special case of the MAP estimation, where we assume the parameters have a prior that is uniformly distributed
