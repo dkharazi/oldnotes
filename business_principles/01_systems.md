@@ -1,14 +1,15 @@
 ## CRM
 - A system that achieves customer relationship management, which is geared more towards sales teams
-- Geared toward front-office activities
-- Oriented toward customers
-- Focuses on increasing sales
-- Used by customer-service and sales teams
-- Examples:
-    - Call Center
-    - Customer Service
-    - Community Management
-    - Social Media Management
+- Focuses on answering general business-level sales questions, rather than product-level sales questions, such as:
+	- Sales summaries
+	- General company performance
+	- Sales leadboards between sales team
+	- Largest sale by sales team member
+- Used by customer-service and sales teams, which includes:
+	- Sales Team
+	- Call Center
+	- Customer Service
+	- Community Management
 
 ## ESP
 - A system that achieves email services provision, which is geared more towards digital marketing teams
@@ -16,16 +17,31 @@
 - Designated for marketing campaigns involving things like A/B testing, etc.
 
 ## OMS
-- A system that achieves an order management system
-- Manages order processing
-- Typically much larger than CRM and ERP systems
-- Can contain overlapping functions from both the CRM and ERP systems
-    - Examples include call center management, customer service, etc.
-- Examples
+- A system that achieves an order management solutions, which is geared more towards supply chain analysts and managers
+- Focuses on answering more specific order-level questions and performing inventory operations, such as:
+	- Managing invoices (i.e. overdue invoices)
+	- Managing incoming purchase orders
+	- Managing overdue shipments
+	- Managing costs of shipping orders
+	- Managing shipping and store inventory
+- Used by supply chain teams, who are responsible for:
     - Order entry management
     - Order processing management
     - Order Invoicing
     - Order Tracking
+
+## PLM
+- A system that achieves an product lifecycle management, which is geared more towards product designers
+- Focuses on answering more specific project-level questions, such as:
+	- Managing product designs
+	- Managing the process of creating a new product to be sold by a business to its customers
+	- Capturing and maintaining information on products and/or services through their development and useful life
+- Used by product analysts, who are responsible for:
+	- Product design
+	- Product data management
+	- Manufacturing process management
+	- Product or profile management
+	- Systems engineering
 
 ## ERP
 - A system that achieves enterprise resource planning
@@ -42,17 +58,24 @@
     - Inventory Management
 
 ## RMS
-- A system that achieves retail marketing solutions)
-- Similar to CRM, but involves less analytics
-- Examples:
-    - Customer Segmentation
-    - Customer Loyalty
-    - Coupon Management
-    - SMS Marketing
-    - Consumer Insights
-    - Email Marketing
-    - eReceipt Marketing
-    - Social Media Interaction
+- A system that achieves POS (point of sales) retail management solutions, which is geared more towards store owners
+- Focuses on answering more specific product-level questions at the store-level and performing sales operations, such as:
+	- Listing product codes, descriptions, pricing, etc.
+	- Listing product quantities by store
+	- Listing order information, such as purchase details and shipping estimates (i.e. customer information, shipping address, billing address, email address, etc.)
+	- Performing product sales
+	- Performing pricing adjustments (i.e. promos) for products at the store level
+	- Performing sales estimates for groups of products
+	- Performing discounts, vouchers, loyalty offers on products at the store level
+- Used by store managers and merchandising teams, such as:
+	- Store managers
+	- Customer Loyalty teams
+	- Coupon Management teams
+	- SMS Marketing teams
+	- Consumer Insights teams
+	- Email Marketing teams
+	- eReceipt Marketing teams
+	- Social Media Interaction teams
 
 ## ITSM
 1. Service Strategy
