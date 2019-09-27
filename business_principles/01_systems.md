@@ -35,7 +35,7 @@
 - Focuses on answering more specific project-level questions, such as:
 	- Managing product designs
 	- Managing the process of creating a new product to be sold by a business to its customers
-	- Capturing and maintaining information on products and/or services through their development and useful life
+	- Capturing and maintaining information on products and/or services through their development and useful life, which includes data about product stages before their release, the percentage of completion for each stage at a given time, product measurements and materials, etc.
 - Used by product analysts, who are responsible for:
 	- Product design
 	- Product data management
