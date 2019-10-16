@@ -1,5 +1,6 @@
 ## Bayesian Inference
-- Uses Bayes Theorem at a very broad, conceptual level: P(H|D)∝P(H)P(D|H)
+- Bayesian Inference typically involves parameter and density estimation using probabalistic methods, such as Monte Carlo methods, Markov chains, or MCMC algorithms
+- Uses Bayes Theorem at a very broad level when calculating posterior probabilities: P(H|D)∝P(H)P(D|H)
 	- Where P(H|D) is the posterior distribution, which is a combination of the data for some parameter and our prior beliefs
 	- And P(H) is the prior distribution, which represents our belief about the parameter
 	- And P(D|H) is the likelihood distribution, which represents the data
@@ -29,6 +30,14 @@
 	2. Observed data is considered fixed values, but the model parameters are random variables
 		- i.e. the parameters are represented using distributions
 
+## Advantages Bayesian Inference
+1. Able to insert prior knowledge (priors) when there is a lack of data
+	- These priors will typically become irrelevant when the data better reflects the population
+	- This can happen when there is a small sample size or large sample size
+	- However, there is typically a smaller chance of having data reflecting the population when we have a small sample size, in comparison to when we have a large sample size
+2. Able to include an added level of uncertainty or randomness in estimates
+	- This can arguably better reflect the randomness that occurs in real world observations
+
 ## Different Methods of Inference
 - Example of Bayesian statistics: MCMC simulation
 - Example of Frequentist statistics: ML estimation
@@ -48,3 +57,5 @@
 - https://stats.stackexchange.com/questions/2272/whats-the-difference-between-a-confidence-interval-and-a-credible-interval/2287#2287
 - https://stats.stackexchange.com/questions/22/bayesian-and-frequentist-reasoning-in-plain-english
 - https://frnsys.com/ai_notes/foundations/bayesian_statistics.html
+- https://stats.stackexchange.com/questions/200982/do-bayesian-priors-become-irrelevant-with-large-sample-size
+- http://www.svcl.ucsd.edu/courses/ece271A/handouts/BayesIntro.pdf
