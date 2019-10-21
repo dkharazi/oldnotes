@@ -43,3 +43,4 @@
 - https://towardsdatascience.com/markov-chain-monte-carlo-291d8a5975ae
 - https://nicercode.github.io/guides/mcmc/
 - https://theoreticalecology.wordpress.com/2010/09/17/metropolis-hastings-mcmc-in-r/
+- https://www.stat.cmu.edu/~cshalizi/statcomp/13/lectures/16/lecture-16.pdf

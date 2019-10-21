@@ -66,3 +66,4 @@
 - https://pdfs.semanticscholar.org/d99e/754ed8d336cc29bd4342a196cfb1bc69bddb.pdf
 - https://www.palisade.com/risk/monte_carlo_simulation.asp
 - https://www.quora.com/Is-there-a-reason-to-use-Monte-Carlo-when-we-already-have-a-formula
+- https://www.stat.cmu.edu/~cshalizi/statcomp/13/lectures/16/lecture-16.pdf
