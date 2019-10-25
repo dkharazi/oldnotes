@@ -21,3 +21,5 @@
 - The development of a data warehouse involves a top-down approach, while a data mart involves a bottom-up approach
 - A data warehouse is thought of as more adjustable, information-oriented and longtime existing; whereas a data mart is thought of as restricted, project-oriented, and has a shorter existence
 
+## References
+- https://data-flair.training/blogs/business-intelligence-and-data-warehousing/

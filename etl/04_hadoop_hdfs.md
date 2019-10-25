@@ -44,4 +44,5 @@
 ## References
 - https://en.wikipedia.org/wiki/Comparison_of_distributed_file_systems
 - https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html
-- https://stackoverflow.com/questions/40601991/what-is-the-principle-of-code-moving-to-data-rather-than-data-to-code 
+- https://stackoverflow.com/questions/40601991/what-is-the-principle-of-code-moving-to-data-rather-than-data-to-code
+- https://www.researchgate.net/figure/Apache-Hadoop-Ecosystem_fig3_307619823 

@@ -13,3 +13,4 @@
 ## References
 - https://www.dezyre.com/hadoop-tutorial/hadoop-sqoop-tutorial-data-aggregation
 - https://www.quora.com/Which-is-better-sqoop-or-spark
+- https://docs.cloudera.com/HDPDocuments/Ambari-2.7.1.0/bk_workflow-management/content/create_sqoop_extract_action.html
