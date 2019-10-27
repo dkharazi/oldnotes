@@ -1,6 +1,19 @@
+## General Description
+- Linear Discriminant Analysis (LDA) is a supervised classification technique that uses dimensionality reduction
+- Specifically, LDA uses dimensionality reduction by mapping the data from a high dimensional space to a lower dimensional space
+- The data is transformed to a lower dimensional space by finding the axes that maximize the seperatibility between classes (in the lower dimensional space)
+- Said another way, LDA maps the data from a high dimensional space to a lower dimensional space by performing a linear transformation on the data in its original form (i.e. in the high dimensional space)
+- More specifically, the linear transformation includes a change of basis that finds the axes that best separate the classes 
+
 ## Assumptions
 - Observations within each class are drawn from a multivariate Gaussian distribution
-- Each class has its own mean vector, but the same covariance matrix for each classification
+- Each class has its own unique mean vector, but each class needs to have equal variance/covariance
+
+## The Algorithm
+1. Perform a change of basis on the data that finds the axes that best separate the classes
+2. Receive coefficients for (k-1) number of linear discriminants (LDA axes) based on the k number of classes (from the response)
+3. Use these coefficients to map the data on the new vector space (LDA axes)
+4. Determine the class for an observation by observing where the mapped observation lands with respect to the (linear) decision boundaries
 
 ## Preparing for LDA
 - Check assumptions
@@ -8,17 +21,23 @@
 	- Same variance - standarize data to ensure equal variance is maintained across distribution
 - Possibly remove outliers
 
-## Why do we need this method
-- When the classifications are well-separated, the parameter estimates for the logistic model are suprisingly unstable, and LDA does not suffer from this
-- If n is small and the distributun of the predictors is approximately normal in each of the classifications, the LDA model is more stable than the logistic model
-- For the above reasons, and many other reasons, LDA is the preferred method when dealing with >2 response classifications
+## Advantages over Logistic Regression
+- The preferred method of classification is logistic regression when the response has exactly 2 classes
+- The preferred method of classification is linear discriminant analysis when the response has more than 2 classes
+- Logistic regression parameter estimates can become poor/unstable when the two classes are well-separated, whereas LDA does not suffer from this
+- Logistic regression parameter estimates can become poor/unstable if the sample size is small, whereas LDA is more stable (assuming normally distributed predictors)
 
 ## Difference between Logistic Regression and LDA
-- Logistic Regression involves directly modeling Pr(Y=k|X=x) using the logistic function
-	- Estimates parameters using maximum likelihood
-- LDA involves direcetly modeling Pr(Y=k|X=x) using Bayes Theorem
-	- Estimates parameters using maximum likelihood
+- Logistic regression and LDA both use MLE for parameter estimation (or Bayesian techniques)
+- Logistic regression involves directly modeling Pr(Y=1|X=x) using the logistic function
+- LDA involves directly modeling Pr(Y=k|X=x)
 
 ## Difference between PCA and LDA
-- PCA is an unsupervised learning method that inolves linear transformations (dimensionality reduction) to find the features that make up the most variability
-- LDA is a supervised learning method that involves linear transformations (dimensionality reduction) to maximize the distance between classes and minimize the distance within classes
+- PCA is an unsupervised learning method that involves performing linear transformations (dimensionality reduction) on the data to find the features that make up the most variability
+- LDA is a supervised learning method that involves performing linear transformations (dimensionality reduction) on the data to maximize the distance between classes and minimize the distance within classes
+
+## References
+- https://sebastianraschka.com/Articles/2014_python_lda.html#principal-component-analysis-vs-linear-discriminant-analysis
+- https://www.cs.princeton.edu/courses/archive/fall08/cos429/CourseMaterials/lecture2/PCA_handout.pdf
+- http://www.stats.ox.ac.uk/~sejdinov/teaching/sdmml15/materials/HT15_lecture6-nup.pdf
+- http://www.sthda.com/english/articles/36-classification-methods-essentials/146-discriminant-analysis-essentials-in-r/
