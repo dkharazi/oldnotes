@@ -3,7 +3,8 @@
 - Specifically, LDA uses dimensionality reduction by mapping the data from a high dimensional space to a lower dimensional space
 - The data is transformed to a lower dimensional space by finding the axes that maximize the seperatibility between classes (in the lower dimensional space)
 - Said another way, LDA maps the data from a high dimensional space to a lower dimensional space by performing a linear transformation on the data in its original form (i.e. in the high dimensional space)
-- More specifically, the linear transformation includes a change of basis that finds the axes that best separate the classes 
+- More specifically, the linear transformation includes a change of basis that finds the axes that best separate the classes
+- LDA uses linear decision boundaries to determine the class of an observation in the newly mapped space
 
 ## Assumptions
 - Observations within each class are drawn from a multivariate Gaussian distribution
