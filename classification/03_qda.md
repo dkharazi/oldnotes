@@ -20,3 +20,4 @@
 ## References
 - https://onlinecourses.science.psu.edu/stat508/book/export/html/696
 - https://mdav.ece.gatech.edu/ece-6254-spring2017/notes/04-plugin-rules.pdf
+- http://www.sthda.com/english/articles/36-classification-methods-essentials/146-discriminant-analysis-essentials-in-r/#quadratic-discriminant-analysis---qda
