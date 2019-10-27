@@ -1,9 +1,9 @@
 ## General Description
-- Linear Discriminant Analysis (LDA) is a supervised classification technique that uses dimensionality reduction
-- Specifically, LDA uses dimensionality reduction by mapping the data from a high dimensional space to a lower dimensional space
+- Linear Discriminant Analysis (LDA) is a supervised classification technique that is solved using either SVD (i.e. dimensionality reduction) or bayes theorem (i.e. Bayesian techniques)
+- If we assume LDA uses dimensionality reduction when predicting an observation's class, then LDA involves mapping the data from a high dimensional space to a lower dimensional space
 - The data is transformed to a lower dimensional space by finding the axes that maximize the seperatibility between classes (in the lower dimensional space)
 - Said another way, LDA maps the data from a high dimensional space to a lower dimensional space by performing a linear transformation on the data in its original form (i.e. in the high dimensional space)
-- More specifically, the linear transformation includes a change of basis that finds the axes that best separate the classes
+- More specifically, the linear transformation includes a change of basis (using the SVD formula) that finds the axes that best separate the classes
 - LDA uses linear decision boundaries to determine the class of an observation in the newly mapped space
 
 ## Assumptions
