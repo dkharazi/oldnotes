@@ -23,6 +23,7 @@
 - In other words, all web services are APIs, but not all APIs are Web Services
 - A web service always needs a network for its operation, whereas an API doesn't need a network for its operation
 - An API deals with communication between software in general, whereas a web service deals with communication between software on two different machines over a network
+- Essentially, a web service typically refers to a back-end service (or API)
 
 ## HTTP Methods
 - HTTP methods represent the protocol between applications across the web
