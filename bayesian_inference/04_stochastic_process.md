@@ -2,7 +2,7 @@
 - A stochastic process is a sequence of random variables
 - A stochastic process is indexed by some other variable (typically indexed by time)
 - We can define a stochastic process as S, which can also be thought of as a sequence of successive random variables S0, S1, ...St, ...Sn, which all belong to the same function
-        - In other words, the space each of these random variables lives over is the same, and when we need to talk about that space, then we’ll talk about S, and any realizations of S will be written as s
+- In other words, the space each of these random variables lives over is the same, and when we need to talk about that space, then we’ll talk about S, and any realizations of S will be written as s
 
 ## Difference between Stochasticity and Determinism
 - Determinism is any process that isn't stochastic, or doesn't involve an element of randomness
