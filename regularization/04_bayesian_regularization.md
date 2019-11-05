@@ -1,7 +1,7 @@
 ## General Description
 - The MAP estimator with different prior distributions lead to different regulizers
-	- A MAP estimator with a zero-mean Gaussian prior equals the cost function associated with L1 regularization (i.e. LASSO)
-	- A MAP estimator with a zero-mean Laplacean prior equals the cost function associated with L2 regularization (i.e. Ridge)
+	- A MAP estimator with a zero-mean Gaussian prior equals the cost function associated with L1 regularization of OLS estimation (i.e. LASSO)
+	- A MAP estimator with a zero-mean Laplacean prior equals the cost function associated with L2 regularization of OLS estimation (i.e. Ridge)
 - In other words, the choice of regulizer is analogous to the choice of prior over the weights in the Bayesian framework
 
 ## L1 Regularization
