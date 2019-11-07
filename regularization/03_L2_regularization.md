@@ -1,6 +1,6 @@
 ## General Description
 - L2 regularization is regularization technique used for variable selection, roughly speaking
-- L2 regularization achieves variable selection by slowly shrinking the OLS coefficients down to a very small number, but not always to zero
+- L2 regularization achieves variable selection by slowly shrinking the OLS coefficients down to zero, but not exactly zero
 - L2 regularization shrinks the OLS coefficients by applying a penalty term to the OLS objective function, and minimizing this modified cost function instead of the original OLS objective function
 - The penalty term associated with L2 regularization is the square of the magnitude of OLS coefficients, which is the main difference between the L1 and L2 regularization methods
 - L2 regularization is used in ridge regression
