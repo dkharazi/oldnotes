@@ -17,7 +17,7 @@
 - Bayesian inference and MAP both return some information about the parameters of the posterior distribution, prior distribution, and likelihood function
 - MLE only returns some information about the parameters of the likelihood function
 - Bayesian inference typically returns some information about a parameter through simulation
-- MAP and MLE typically returns some information about a parameter through analytical computations of assumed closed-form distributional expressions
+- MAP and MLE typically return some information about a parameter through analytical computations of assumed closed-form distributional expressions
 - MAP returns some information about a parameter through analytical computation
 	- Specifically, the analytical computation involves maximizing the likelihood of observing the parameter given some data
 	- Assumes the posterior follows a closed-form distribution
