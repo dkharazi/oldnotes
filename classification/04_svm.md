@@ -43,7 +43,7 @@
 	- Laplace RBF kernel
 	- Hyperbolic Tangent kernel
 	- Sigmoid kernel
-	- 
+ 
 ## References
 - https://uk.mathworks.com/help/stats/support-vector-machines-for-binary-classification.html
 - https://towardsdatascience.com/kernel-function-6f1d2be6091
