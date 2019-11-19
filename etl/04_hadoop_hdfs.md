@@ -25,7 +25,7 @@
 - Microsoft Azure
 
 ## HDFS
-- HDFS is apart of the Hadoop ecosystem
+- HDFS is part of the Hadoop ecosystem
 - HDFS can be used as a standalone dfs from the Hadoop ecosystem
 	- Example: We can use Spark as a computing engine and HDFS as our storage
 - HDFS is a distributed file system designed to run on commodity hardware
