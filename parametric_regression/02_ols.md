@@ -1,5 +1,5 @@
 ## General Description
-- The least squares criterion is a method for estimating regression coefficients (or population parameters)
+- The ordinary least squares criterion is a method for estimating regression coefficients (or population parameters)
 - The least squares criterion involves minimizing the sum of squares of the residuals (RSS)
 - In other words, the least squares criterion chooses coefficient estimates, such as β-hats, that minimize the RSS
 - Using the least squares approach to find the population parameters, we can use some calculus to find equations for the coefficient estimates that minimize the residual sum of squares
@@ -20,5 +20,14 @@
 	- For example, Y = β0 + β1*X
 - The least squares regression line is our "best guess" at representing the population regression line, assuming the true relationship is linear
 
+## MLE versus OLS
+- Minimizing the squared error is equivalent to maximizing the likelihood when the errors are normally distributed (i.e. in the case of linear regression)
+	- Refer to the top response on the stackoverflow post for a proof
+- We can use MLE for predicting y values in linear regression, even if the response variable has an arbitrary distribution (rather than the normal distribution)
+- For example, our response variable could have a Bernoulli distribution, exponential distribution, etc.
+- In this case, we would map the linear predictor to the non-normal distribution of the response variable using a link function
+- Then, the likelihood function becomes the product of all the outcomes (i.e. probabilities between 0 and 1) after the transformation of the predictor variables
+
 ## References
 - http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf
+- https://stats.stackexchange.com/questions/143705/maximum-likelihood-method-vs-least-squares-method
