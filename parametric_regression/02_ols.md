@@ -22,7 +22,7 @@
 
 ## MLE versus OLS
 - Minimizing the squared error is equivalent to maximizing the likelihood when the errors are normally distributed (i.e. in the case of linear regression)
-	- Refer to the top response on the stackoverflow post for a proof
+	- Refer to the top response on the referenced Stack Overflow post for a proof
 - We can use MLE for predicting y values in linear regression, even if the response variable has an arbitrary distribution (rather than the normal distribution)
 - For example, our response variable could have a Bernoulli distribution, exponential distribution, etc.
 - In this case, we would map the linear predictor to the non-normal distribution of the response variable using a link function
