@@ -1,5 +1,5 @@
 ## General Description
-- Spark is a distributed data processing engine
+- Spark is a distributed computing (or data processing) engine
 - Spark represents its core processing engine, along with the following other features integrated into the processing engine:
 	- Spark SQL
 	- Spark Streaming
