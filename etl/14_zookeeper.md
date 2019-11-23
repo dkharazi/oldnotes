@@ -74,7 +74,7 @@
 	- Only one node allowed to hold the lock at a time
 	- ZooKeeper is responsible for making sure the above conditions are satisfied
 - Group management
-        - Tracking data about a node's availability
+	- Tracking data about a node's availability
 	- ZooKeeper is responsible for making sure the above condition is satisfied
 - Crash detection
 	- When tracking data about a node's availability, we need to ensure this data is ephemeral, meaning it will automatically go away if the node disconnects or crashes (this ensure data from old nodes doesn't pile up)
