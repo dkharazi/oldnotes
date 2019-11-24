@@ -13,7 +13,7 @@
 - The odds, log-odds, and probability convey the same concept, but in different formats
 - Odds of success are defined as the ratio of the probability of success over the probability of failure
 - Log-odds of success are defined as the log of the odds of success
-- We will sometimes apply the logit function to our logistic regression model, which will give us the log-odds of success
+- We will sometimes apply the logit function to our conditional probabilities (logistic regression model's predictions), which will give us the log-odds of success
 - This is because log-odds represent our probabilities of success as a function of our covariates
 - In other words, the log-odds are linearly related to our covariates
 - An example of manually calculating the odds: if an average of nine out of every ten people will default, then the odds of a person defaulting is 9, since p(X)=0.9 implies an odds of 0.9/(1-0.9)=9

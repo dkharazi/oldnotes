@@ -10,6 +10,12 @@
 - Similar to a linear model, a GAM can be applied with both quantitative and qualitative responses
 - A GAM model provides a useful compromise between linear and fully nonparametric models
 
+## Additive Model
+- An additive model is a type of model that is made up of individual components added together
+- In other words, an additive model should follow the following format: yi = β0 + fj(xij)
+- The individual components can be either linear components or non-linear components, but they usually refer to non-linear components
+- Examples of additive models: linear regression models, linear probability model, GAMs, etc.
+
 ## Advantages of GAMs
 - Because a GAM fits a non-linear function to each predictor variable:
 	- We can make more accurate predictions if the true fit between the response variable and an individual predictor variable is non-linear (compared to a linear fit)
@@ -41,3 +47,4 @@
 
 ## References
 - http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf
+- https://en.wikipedia.org/wiki/Additive_model
