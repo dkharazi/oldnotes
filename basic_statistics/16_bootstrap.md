@@ -16,8 +16,8 @@
 1. We have a good sample that effectively represents the population
 2. Fit our model to the sample and calculate an estimate
 3. Repeat the following many times:
-	a) Simulate surrogate data from our initial sample
-	b) Fit our model to the surrogate data and calculate an estimate
+	- Simulate surrogate data from our initial sample
+	- Fit our model to the surrogate data and calculate an estimate
 4. Approximate the distribution of our estimates by combining our estimates together after sampling our sample
 
 ## References
