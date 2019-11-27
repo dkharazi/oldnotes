@@ -1,6 +1,10 @@
 ## What is a metric?
 - A quantitative measurement
 
+## Perils of F-tests
+
+## Perils of R²
+
 ## MSE
 
 ## RMSE
