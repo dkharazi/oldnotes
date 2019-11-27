@@ -12,7 +12,7 @@
 - Feeding the simulated data through our estimator gives us one draw from the sampling distribution, and repeating this many times yields the sampling distrubtion
 - Obviously, the bootstrap principle assumes that our sample represents the population distribution well (which we rarely ever know for certain)
 
-## The Bootstrapping Steps
+## Bootstrapping Steps
 1. We have a good sample that effectively represents the population
 2. Fit our model to the sample and calculate an estimate
 3. Repeat the following many times:
