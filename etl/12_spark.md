@@ -8,6 +8,27 @@
 - A large percentage of Spark's speed comes from storing data in-memory (which allows Spark to rapidly run repeated queries)
 - We are able to run Spark on server-side clusters
 
+## Motivating Big Data Technologies
+- When dealing with big data technologies, there are typically two general types of tools:
+	1. Execution engines (required)
+	2. Query Optimizers (optional)
+- An execution engine is a framework that processes queries (or jobs) related to the data
+- A query optimizer is a framework that optimizes queries before (or sometimes during) they are processed
+
+## Hive and Spark
+- Spark is a framework that contains its own execution engine and query optimizers, but it is known for its execution engine
+- Hive is a framework that contains an execution engine and query optimizers, but it is known for its query optimizers
+- Hive doesn't really have its own execution engine, since its default execution engine is just MapReduce
+- Spark has its own execution engine
+- Hive's query optimization plan is based on its Metastore, which represents relational tables containing metadata about the HDFS
+- Spark's query optimization plan is based on its Catalyst Optimizer, which represents a programming model for rule-based optimization and cost-based optimization
+- Hive typically sits on top of HDFS
+	- In this case, we would use HDFS as our storage layer, Hive as our query optimization layer, and Hive as our execution engine layer (or we could say MapReduce is our execution engine layer, since Hive's default execution engine is MapReduce)
+- Spark can sit on top of HDFS or Hive
+	- In this case, we could use HDFS as our storage layer, Hive as our query optimization layer, and Spark as our execution engine layer
+	- Or, we could just use HDFS as our storage layer, Spark as our query optimization layer, and Spark as our execution engine layer
+	- Or, we could just use HDFS as our storage layer and Spark as our execution engine layer (without any query optimization layer)
+
 ## Relevant Spark APIs
 - Spark SQL is an API that lets you query structured data inside Spark programs, using either SQL or a familiar DataFrame API
 	- DataFrames and SQL provide a common way to access a variety of data sources, including Hive, Avro, Parquet, ORC, JSON, and JDBC
