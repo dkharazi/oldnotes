@@ -108,17 +108,29 @@
 	- Where b represents vector b
 	- Where ‖a‖ = sqrt(Σa²)
 	- Where ‖b‖ = sqrt(Σb²)
+- Note that the cosine similarity is essentially the same as the euclidean distance on normalized data
 
 ## Use-Cases for Euclidean Distance, Manhattan Distance, and Cosine Distance
 - The euclidean disance is represented as a distance in the physical world, which is a natural notion of distance
 - The euclidean distance is frequently used for finding the nearest hospital for emergency helicopter flights
 - The euclidean distance is also used in natural language processing applications
-- Speicifcally, the euclidean distance is calculated with a bag-of-words representation, while normalizing the word count vectors by the euclidean length of words in each document
+- Specifically, the euclidean distance is calculated with a bag-of-words representation, while normalizing the word count vectors by the euclidean length of words in each document
 - The manhattan distance is typically preferred to the euclidean distance for the case of high dimensional data, since it can provide similar distances to the euclidean distance
 - The manhattan formula is frequently used for measuring the distances in chess, compressed sensingm and frequency distributions
 - The cosine similarity is represented as an angle between two vectors
 - The cosine similarity is typically used in natural language processing applications
 - Specifically, the cosine similarity is used to measure how similar documents are to each other (irrespective of their size)
+
+## Example using Euclidean and Cosine Distances
+
+| document | car | bike | tire | she | sand | bench | doctor |
+|----------|-----|------|------|-----|------|-------|--------|
+| 01       | 5   | 0    | 3    | 1   | 0    | 2     | 0      |
+| 02       | 3   | 0    | 5    | 0   | 1    | 6     | 0      |
+
+- For this example, we will exclude the document variable from our euclidean, haversine, and cosine calculations
+- Euclidean = sqrt(Σ(xᵢ-yᵢ)²) = ((5-3)² + (0-0)² + (3-5)² + (1-0)² + (0-1)² + (2-6)² + (0-0)²) = 4 + 0 + 4 + 1 + 1 + 16 + 0 = 26
+- Cosine = arccos((Σaᵢbᵢ)/‖a‖‖b‖) = arccos((15+15+1+1+12)/(sqrt(25+9+1+4)sqrt(9+25+1+36))) = arccos(44/((6.2)(8.4))) = arccos(0.84) = 0.57
 
 ## References
 - http://staffwww.itn.liu.se/~aidvi/courses/06/dm/lectures/lec9.pdf
