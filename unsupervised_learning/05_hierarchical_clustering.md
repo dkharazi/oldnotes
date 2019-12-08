@@ -40,7 +40,7 @@
 - The single-link method is another approach for minimizing the sum-of-squares in hierarchical agglomerative clustering
 - The single-link clustering method can handle any cluster shape
 - However, the single-link clustering method doesn't care about compactness or size-balance
-- Therefore, the single-link clustering method should only be used for separation
+- Instead, the single-link clustering method should only be used if we care about separation (of distance)
 - The single-link clustering method merges clusters only if two points are close enough
 - The algorithm for the single-link method is the following:
 	1. Start with each point in a cluster by itself (sum-of-squares = 0)
@@ -64,6 +64,8 @@ right number of clusters
 - At the moment, we really don't even know what "the right number of clusters" means
 - Therefore, we should always use cross-validation when determining our clusters to see how often the points in question wind up in the same cluster
 - If they don't fall into the same clusters repeatedly, then we should be skeptical of those clusters at the given moment
+- Specifically, we should also look at dendrogram (i.e. tree structure) on new data to see if the leaves are different
+- Then, we should how much the shape of the tree changes to measure the merging costs at each level, in order to get a good idea of how many clusters we should have
 
 ## References
 - https://www.stat.cmu.edu/~cshalizi/350/2008/lectures/08/lecture-08.pdf
