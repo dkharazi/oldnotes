@@ -4,6 +4,7 @@
 - The k-means clustering is an unsupervised algorithm, and therefore uses input vectors to make inferences without referring to known (or labelled) output
 - The k-means clustering algorithm is one of the simplest and popular unsupervised algorithms
 - Essentially, k-means clustering involves defining a k number of clusters (and thus k number of centroids) and associating each data point to a cluster that reduces the cluster sum of squares
+- The k-means algorithm gives us what's sometimes called a simple (or flat) partition, because it just gives us a single set of clusters, with no particular organization or structure within them
 
 ## K-Means Algorithm
 1. Guess the number of clusters k
