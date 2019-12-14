@@ -72,7 +72,7 @@
 - The span of two vectors v and w (or spanning set) is the set of all of their linear combinations
 - For example, the span (or spanning set) of the two vectors v = [1, 1] and w = [1, -2] makes up R²
 - Said another way, the two vectors v = [1, 1] and w = [1, -2] span R²
-- We can think of a vector as a point, a set of vectors as a set of points, and a span of a set of vectors as a plane
+- We can think of a single vector as a point, a set of vectors as a set of points, a span of a single vector as a line, and a span of a set of vectors as a plane
 - Since a one dimensional plane is a line, a span of a one dimensional vector can be thought of as a line
 
 ## Basis Vectors
@@ -193,6 +193,17 @@
 - Obviously, this concept doesn't only apply to 3-by-2 and 2-by-3 matrics, but any other nonsquare matrices as well
 
 ## Dot Products and Duality
+- If you have two vectors of the same dimension (i.e. two lists of numbers with the same length), then taking their dot product has the following numerical definition:
+	1. First, pairing up all of their coordinates
+	2. Then, multiplying those pairs together
+	3. Then, adding those multiplied pairs together
+- Here are some examples of calculating the vector dot products:
+	- dotprod([1, 2], [3, 4]) = (1x3) + (2x4) = 11
+	- dotprod([6, 2, 8, 3], [1, 8, 5, 3]) = (6x1) + (2x8) + (8x5) + (3x3) = 71
+- We can take the numerical definition of a dot product from above, and translate it to a more intuitive geometric interpretation:
+	1. Pairing up all of their coordinates looks like ...
+
+## Matrix Multiplication, Dot Products, Linear Combinations, and Linear Transformations
 
 ## Change of Basis
 
@@ -202,12 +213,6 @@
 ## Eigenvalues
 
 ## References
-- https://en.wikipedia.org/wiki/Linear_subspace
 - http://www.math.harvard.edu/archive/20_spring_05/handouts/ch05_notes.pdf
-- http://www.math.niu.edu/~beachy/courses/240/06spring/vectorspace.html
-- https://events.csa.iisc.ac.in/summerschool2017/wp-content/uploads/slides/7.pdf
-- https://www.quora.com/Are-the-terms-linear-combination-and-linear-transformation-used-interchangeably-in-linear-algebra-or-are-they-different
-- https://www.quora.com/Are-the-terms-linear-combination-and-linear-transformation-used-interchangeably-in-linear-algebra-or-are-they-different
-- https://www.mathbootcamps.com/linear-combinations-vectors/
-- https://steemit.com/mathematics/@drifter1/mathematics-linear-algebra-vector-spaces
-- https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
+- https://math.stackexchange.com/questions/668/whats-an-intuitive-way-to-think-about-the-determinant
+- https://en.wikipedia.org/wiki/Determinant
