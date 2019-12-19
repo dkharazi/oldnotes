@@ -42,6 +42,10 @@
 - As stated previously, PCA finds the eigenvector that maximizes the variance
 - The eigenvector that maximizes the variance is the same eigenvector that minimizes the error (between the data and the eigenvector)
 - Therefore, PCA will find the eigenvector that maximizes the variance by finding the eigenvector that minimizes the variance
+- The eigenvalues associated with the eigenvectors are represented as a diagonal covariance matrix
+- Therefore, the covariance between each principal component is 0 and thus uncorrelated with each other, since this matrix is a diagonal matrix
+- The sum of the eigenvalues should sum up to the total amount of variance for each variable
+- Therefore, each eigenvalue represents the fraction (of that total variance made up by the original variables) that the eigenvector makes up
 
 ## Interpreting the Principal Components
 - Principal components are ordered based on how much variance they make up in the data
