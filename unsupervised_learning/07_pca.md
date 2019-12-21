@@ -65,7 +65,7 @@
 - https://math.stackexchange.com/questions/23596/why-is-the-eigenvector-of-a-covariance-matrix-equal-to-a-principal-component
 - https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues
 - https://stats.stackexchange.com/questions/143905/loadings-vs-eigenvectors-in-pca-when-to-use-one-or-another
+- https://stats.stackexchange.com/questions/290750/linearity-of-pca
 - https://en.wikipedia.org/wiki/Principal_component_analysis
 - https://en.wikipedia.org/wiki/Dimensionality_reduction#Principal_component_analysis_(PCA)
-- https://stats.stackexchange.com/questions/290750/linearity-of-pca
 - https://shankarmsy.github.io/posts/pca-vs-lr.html
