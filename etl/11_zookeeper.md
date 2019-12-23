@@ -1,7 +1,7 @@
 ## Motivation
 - Apache MapReduce, Apache HBase, and Apache Spark are all examples of distributed services
 - These distributed services involve distributed processes
-- ZooKeeper is a distributed service manages and coordinates these distributed processes
+- ZooKeeper is a distributed service manager and coordinates these distributed processes
 
 ## General Description
 - ZooKeeper is a type of distributed storage that acts as a coordination service for a distributed process
