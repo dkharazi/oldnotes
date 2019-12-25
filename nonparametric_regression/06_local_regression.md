@@ -28,4 +28,5 @@
 
 ## References
 - http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf
+- http://www.stat.cmu.edu/~larry/=sml/nonpar.pdf
 - https://www.youtube.com/watch?v=Vf7oJ6z2LCc

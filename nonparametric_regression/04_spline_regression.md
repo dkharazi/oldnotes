@@ -81,6 +81,7 @@
 ## References
 - https://www.analyticsvidhya.com/blog/2018/03/introduction-regression-splines-python-codes/
 - https://www.youtube.com/watch?v=rtwOrZL02M0
+- http://www.stat.cmu.edu/~larry/=sml/nonpar.pdf
 - https://en.wikipedia.org/wiki/Polynomial_regression
 - https://www.theanalysisfactor.com/regression-modelshow-do-you-know-you-need-a-polynomial/
 - https://discuss.analyticsvidhya.com/t/how-cubic-splines-is-different-from-the-natural-cubic-splines/8259/2
