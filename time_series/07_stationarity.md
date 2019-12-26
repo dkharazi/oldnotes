@@ -1,5 +1,5 @@
 ## General Description
-- An assumption of most time-series models, such as AR, MA, ARMA, ARCH, and ARIMA, is they are stationary
+- An assumption of most time-series models, such as AR, MA, ARMA, and ARCH, is they are stationary
 - A model is stationary if it satisfies the following criteria:
 	- Mean(sᵢ) is constant
 	- Var(sᵢ) is constant with time (i.e. no heteroskedasticity)
