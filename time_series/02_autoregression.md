@@ -13,7 +13,7 @@
 - However, this typically leads to overfitting
 - Therefore, we are interested in only including the most significant lag variables in our model to avoid overfitting, and thus building a model that will hold up better over time
 - We can determine which lags are most significant by observing the lags within a partial autocorrelated function (or pacf) chart
-- Specifically, we want to know which months have sales that are directly correlated with the sales of our current month
+- Specifically, we want to know which months have prices that are directly correlated with the prices of our current month
 - Essentially, we only want to include the lags in our model whose direct effects (based on pacf) are high in magnitude according to the pacf chart
 
 ## References

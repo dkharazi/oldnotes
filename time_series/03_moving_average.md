@@ -1,12 +1,14 @@
 ## General Description
 - A moving average model is linear regression model, where the response variable represents some value indexed by the current time period and the predictor variables represent our mean of the value and some white noise error term
 - Specifically, we can define a moving average model of order r as the following:
-	- sᵢ =  μ + θ₁𝜀ᵢ₋₁ + θᵣ𝜀ᵢ₋ᵣ
-	- Where sᵢ is the predicted value in our current time period
+	- sᵢ =  μ + 𝜀ᵢ + θ₁𝜀ᵢ₋₁ + θᵣ𝜀ᵢ₋ᵣ or sᵢ-hat = μ + θ₁𝜀ᵢ₋₁ + θᵣ𝜀ᵢ₋ᵣ
+	- Where sᵢ is the unknown true value in our current time period
+	- Where sᵢ-hat is the predicted value in our current time period
 	- Where μ is the mean of our values (this is constant for any i)
-	- Where 𝜀ᵢ₋₁ is the error of the previous value and what we observed
+	- Where 𝜀ᵢ is the unknown error of the current predicted value and what we will observe
+	- Where 𝜀ᵢ₋₁ is the error of the previous predicted value and what we observed
 	- Where θ₁ represents the percentage of the error 𝜀ᵢ₋₁ we should include in our model
-	- Where 𝜀ᵢ₋ᵣ is the error of the rth previous value and what we observed
+	- Where 𝜀ᵢ₋ᵣ is the error of the rth previous predicted value and what we observed
 	- Where θᵣ represents the percentage of the error 𝜀ᵢ₋ᵣ we should include in our model
 - The moving-average model should not be confused with the simple moving average, which takes the arithmetic mean of a given set of prices over the past number of days
 
@@ -55,6 +57,16 @@
 	- The average price of salmon (i.e. μ) is 10
         - The percentage of the error from February's prediction that we wanted to include (i.e. θ₁) is 0.5
 	- The percentage of the error from January's prediction that we wanted to include (i.e. θ₂) is 0.5
+
+## Determining Order for Moving Average Models
+- The moving average model is parameterized by an order q, which refers to the number of lags to account for in the prediction
+- Similar to an autoregressive model, including every single lag variable (or a very large amount of lag variables) is a typical naive approach to fitting a moving average model
+- This approach typically leads to overfitting
+- Therefore, we are interested in choosing the smallest order q for our model that will include only the significant lags
+- This will help us avoid overfitting and build a model that will hold up better over time
+- We can determine which lags are most significant by observing the lags within an autocorrelated function (or acf) chart
+- Specifically, we want to know what order includes only the lags that are most indirectly or directly correlated with the price of salmon of our current month
+- Essentially, we only want to include the lags in our model whose direct or indirect effects (based on acf) are high in magnitude according to the acf chart 
 
 ## References
 - https://www.youtube.com/watch?v=voryLhxiPzE
