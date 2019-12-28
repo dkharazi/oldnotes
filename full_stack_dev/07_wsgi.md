@@ -35,3 +35,4 @@ def simple_app(environ, start_response):
 - https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-14-04
 - https://www.python.org/dev/peps/pep-0333/
 - https://rufuspollock.com/2006/09/28/wsgi-middleware/
+- https://vsupalov.com/what-is-gunicorn/
