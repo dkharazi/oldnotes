@@ -25,6 +25,7 @@ quests from the world wide web
 - Reverse proxying with caching
 	- Nginx stores local copies of web resources for faster retrieval the next time the resource is required
 - Load balancing
+- Limiting rate of traffic
 
 ## Example of Nginx Configuration
 ```
@@ -105,3 +106,4 @@ http {
 - https://www.digitalocean.com/community/tutorials/how-to-set-up-uwsgi-and-nginx-to-serve-python-apps-on-ubuntu-14-04
 - https://stackoverflow.com/questions/5844955/whats-the-difference-between-event-driven-and-asynchronous-between-epoll-and-a
 - https://www.nginx.com/resources/wiki/start/topics/examples/full/
+- https://www.nginx.com/blog/rate-limiting-nginx/
