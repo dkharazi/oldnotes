@@ -34,5 +34,6 @@ def simple_app(environ, start_response):
 - http://ivory.idyll.org/articles/wsgi-intro/what-is-wsgi.html
 - https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-14-04
 - https://www.python.org/dev/peps/pep-0333/
+- https://stackoverflow.com/questions/7739810/wsgi-vs-uwsgi-with-nginx
 - https://rufuspollock.com/2006/09/28/wsgi-middleware/
 - https://vsupalov.com/what-is-gunicorn/
