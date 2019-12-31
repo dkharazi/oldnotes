@@ -5,17 +5,22 @@
 - We can think of the Dockerfile as the shopping list for ingredients, the image as our cake recipe, and the container as the cake we make
 
 ## Use-Cases of Containers
-- Configuration made simple
+- Automated configuration
 	- Since containers represent lightweight instances of the host OS, we can create images with different system requirements or packages to provide different environments for similar application development
 	- This can help developers avoid going through constant system setup and errors 
-- Running multiple apps on a single servers
+- Running many different apps on a single server
 	- Since containers provide a high level of isolation, multiple applications can run on a single server
-- Public cloud portability
-	- Since containers represent lightweight instances of the host OS, they are portable enough to move across different server environments and run on different server environments
-- Server Consolidation
+- Portable over the cloud
+	- Since containers represent lightweight instances of the host OS, they are portable enough to move across server environments and run on different server environments
+- Server consolidation due to lightweight nature
 	- Since containers can run multiple applications on a single server and are more lightweight than VMs, fewer servers can be used up than necessary (compared to VM and single server solutions)
+- Fault tolerant
+	- If one container completely blows up in our face (i.e. interrupted or failure), then our other containers running on that same system will be fine
 
 ## Comparison between VMs and Containers
+- Roughly, a virtual machine is an emulation of a physical computer
+- On the other hand, a container is an emulation of an operating system
+- In other words, a virtual machine emulates the physical hardware, which is why we can run any operating system on top of any other (and also why drivers are included), whereas a container emulates the operating system
 - Container
 	- Lightweight
 	- Native Performance
@@ -69,6 +74,7 @@
 	- For example, COPY [host_dir]
 
 ## References
+- https://insights.sei.cmu.edu/sei_blog/2017/09/virtualization-via-containers.html
 - https://www.reddit.com/r/docker/comments/982cag/docker_for_development_why_and_how/
 - https://stackoverflow.com/questions/51693716/apache-hadoop-yarn-vs-kubernetes
 - https://stackoverflow.com/questions/16047306/how-is-docker-different-from-a-virtual-machine
