@@ -1,7 +1,7 @@
 ## Virtual Machines
 - Azure Data Science Virtual Machines are offered by Azure and hosted by Azure
 - Azure Data Science Virtual Machines are virtual machines with preinstalled data science tools
-- Azure Data Science Virtual Machines are used for building models
+- Azure Data Science Virtual Machines are used for building quick, ad-hoc models
 - We can build models using Python and R code in our local IDE on the virtual machine
 
 ## Machine Learning Services
