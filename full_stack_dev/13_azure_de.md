@@ -48,7 +48,7 @@
 - Azure SQL Data Warehouse is a tool used for creating and managing data warehouses in Azure
 - Azure SQL Database is a tool used for creating and managing databases in Azure
 - Azure Data Studio is a SQL editor used for connecting and querying Azure SQL Data Warehouse and Azure SQL Database
-- Azure Data Factory is a tool used for scheduling or orchestrating movement and transformation of data in an automated fashion
+- Azure Data Factory is a tool used for scheduling or orchestrating movement and transformation of data in an automated fashion (i.e. moving data between SQL Data Warehouse and SQL Database)
 - Polybase is a tool used for moving data to and from Hadoop, Azure Blob Storage, Azure Data Lake, and other unstructured non-relational tables
 
 ## When to Use Azure SQL DW and Azure SQL DB
@@ -60,6 +60,131 @@
 	- Performing a few complex queries on a large amount of historical data
 	- Optimized for OLAP operation, meaning few large requests to the database
 	- In other words, optimized for analytical usage
+
+## Set up a SQL Data Warehouse
+1. Create a resource in the Azure portal
+2. Select SQL Data Warehouse in the Marketplace
+3. Under the Basics tab, include the following information:
+	- Subscription
+	- Resource group
+	- Data warehouse name
+	- Server
+4. Under the Select Performance Level field, select Gen2DW100c
+5. Review + Create
+
+## Add a Client IP Address
+1. After the SQL Data Warehouse instance is provisioned, open it by selecting Go To Resource
+2. At the top of the Overview pane, select the Server Name link to go to the associated SQL Server instance
+3. Select Firewalls and Virtual Networks
+4. Add Client IP
+
+## Create Connections in Azure Data Studio
+1. Select your data warehouse from the resource group in the Azure portal
+2. Copy the server name for the data warehouse
+3. Add a new connection in Azure Data Studio
+4. Enter the following information:
+	- Connection type
+	- Server (taken from the server name from step 2)
+	- Authentication type (e.g. SQL Login)
+	- User name
+	- Password
+	- Database
+5. Connect
+
+## Install Azure CLI for macOS
+1. Install Azure CLI
+```
+brew update && brew install azure-cli
+```
+2. Log in to Azure CLI in Azure CLI
+```
+az login
+```
+3. Run an bash script in Azure CLI
+```
+./path_to_file/test.sh
+```
+
+## Add a User to Azure SQL Data Warehouse
+1. Create the following queries for the database within either Azure SQL Data Warehouse or Azure Data Studio
+2. Create a new server login (so the user can access the server)
+```
+CREATE LOGIN example_user_login WITH PASSWORD = 'Str0ng_password';
+```
+3. Create a new database login (so the user can access the database)
+```
+CREATE USER example_user_name FOR LOGIN example_user_login;
+```
+4. Allow user to read data from Azure SQL Data Warehouse
+```
+EXEC sp_addrolemember 'db_datareader', 'example_user_name';
+```
+
+## Create a Distributed Table in Azure Data Studio
+- Create a hash distributed table
+```
+(
+	[EmployeeID] int NOT NULL,
+	[EmployeeName] varchar(30) NOT NULL,
+	[DOB] date NOT NULL,
+	[Address] varchar(50) NOT NULL,
+	[BloodGroup] nvarchar(2) NOT NULL
+)
+WITH
+(
+	CLUSTERED COLUMNSTORE INDEX,
+	DISTRIBUTION = HASH([EmployeeID])
+);
+```
+- Or create a round-robin distributed table
+```
+(
+	[EmployeeID] int NOT NULL,
+	[EmployeeName] varchar(30) NOT NULL,
+	[DOB] date NOT NULL,
+	[Address] varchar(50) NOT NULL,
+	[BloodGroup] nvarchar(2) NOT NULL
+)
+WITH
+(
+	CLUSTERED COLUMNSTORE INDEX,
+	DISTRIBUTION = ROUND_ROBIN
+);
+```
+- Or create a replicated (distributed) table
+```
+(
+	[EmployeeID] int NOT NULL,
+	[EmployeeName] varchar(30) NOT NULL,
+	[DOB] date NOT NULL,
+	[Address] varchar(50) NOT NULL,
+	[BloodGroup] nvarchar(2) NOT NULL
+)
+WITH
+(
+	CLUSTERED COLUMNSTORE INDEX,
+	DISTRIBUTION = REPLICATE
+);
+```
+
+## Load Data using Data Factory
+1. Locate the SQL Data Warehouse instance in the Azure portal
+2. Select Load Data under the Common Tasks tab
+3. Select Azure Data Factory
+4. Create a Data Factory
+5. Specify the following details:
+	- Data Factory name
+	- Subscription
+	- Select resource group
+	- Select region
+	- Select load data
+6. Specify the following configurations:
+	- Task name
+	- Task description
+	- Task cadence
+	- Expiration time
+7. Select the data source
+8. Select the destination
 
 ## References
 - https://docs.microsoft.com/en-us/azure/sql-data-warehouse/design-elt-data-loading
