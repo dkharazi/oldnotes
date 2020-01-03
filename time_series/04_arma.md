@@ -19,11 +19,11 @@
 - The correlation plot can give us the order of MA model
 
 ## Examples of ARMA Model
-- Let's say we build an ARIMA model, such as the following: ARIMA(1,1)
+- Let's say we build an ARMA model, such as the following: ARMA(1,1)
 	- Our model would be represented as sᵢ-hat = β₀ + β₁sᵢ₋₁ + θ₁εᵢ₋₁
-- Let's say we build an ARIMA model, such as the following: ARIMA(2,1)
+- Let's say we build an ARMA model, such as the following: ARMA(2,1)
 	- Our model would be represented as sᵢ-hat = β₀ + β₁sᵢ₋₁ + β₂sᵢ₋₂ + θ₁εᵢ₋₁
-- Let's say we build an ARIMA model, such as the following: ARIMA(1,2)
+- Let's say we build an ARMA model, such as the following: ARMA(1,2)
 	- Our model would be represented as sᵢ-hat = β₀ + β₁sᵢ₋₁ + θ₁εᵢ₋₁ + θ₂εᵢ₋₂
 
 ## References
