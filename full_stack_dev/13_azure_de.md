@@ -50,6 +50,7 @@
 - Azure Data Studio is a SQL editor used for connecting and querying Azure SQL Data Warehouse and Azure SQL Database
 - Azure Data Factory is a tool used for scheduling or orchestrating movement and transformation of data in an automated fashion (i.e. moving data between SQL Data Warehouse and SQL Database)
 - Polybase is a tool used for moving data to and from Hadoop, Azure Blob Storage, Azure Data Lake, and other unstructured non-relational tables
+- Azure Databricks is a tool used for processing (or transforming) data from Azure Data Warehouse using Spark functions
 
 ## When to Use Azure SQL DW and Azure SQL DB
 - Azure SQL Database is optimized for the following:
@@ -167,7 +168,7 @@ WITH
 );
 ```
 
-## Load Data using Data Factory
+## Load and Move Data around Azure using Data Factory
 1. Locate the SQL Data Warehouse instance in the Azure portal
 2. Select Load Data under the Common Tasks tab
 3. Select Azure Data Factory
@@ -185,6 +186,74 @@ WITH
 	- Expiration time
 7. Select the data source
 8. Select the destination
+
+## Load Data located outside of Azure using Polybase
+1. Create the following queries for the database within either Azure SQL Data Warehouse or Azure Data Studio
+2. Create an external Hadoop data source
+```
+CREATE EXTERNAL DATA SOURCE LabAzureStorage
+WITH
+(
+	TYPE = Hadoop,
+	LOCATION = 'wasbs://labdata@<Name_Of_Storage_Account>.blob.core.windows.net/'
+);
+```
+3. Define the external file format
+```
+CREATE EXTERNAL FILE FORMAT TextFileFormat
+WITH
+(
+FORMAT_TYPE = DELIMITEDTEXT,
+	FORMAT_OPTIONS (
+		FIELD_TERMINATOR = ',',
+		STRING_DELIMITER = '',
+		DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff',
+		USE_TYPE_DEFAULT = FALSE
+	)
+);
+```
+
+## Integrate Data Factory and Databricks
+1. Create an Azure storage account
+2. Create a Data Factory instance
+3. Create a data workflow pipeline
+	- This involves copying data from our source by using a copy activity in Data Factory
+	- A copy activity allows us to copy data from different on-premises and cloud services
+4. Add a Databricks notebook to the pipeline
+5. Analyze the data
+
+## Important Best Practices
+- We should pause the SQL Data Warehouse instance when we don't need to run any queries if we want to save in compute costs
+- Saving data in a format like Parquet is the recommended way to save data if we plan to run several queries against one SQL Data Warehouse Table, since each query can extract a large amount of data to Blob storage
+- Linked services define the connection information needed for Data Factory to connect to external resources
+- In Azure Databricks, a target cluster will start automatically if the cluster isn't already running by Data Factory
+- We can connect our Spark cluster in Databricks to Azure Blob storage by mounting the cluster
+
+## ETL Process in Azure using Databricks
+- Generally, an ETL pipeline takes data from data streams, databases in Azure, etc.
+- Then, we will transform the data in Databricks using Spark commands
+- Lastly, we will load the data into the data warehouse
+- A typical ETL process in Databricks includes the following steps:
+1. Extraction
+	- By using JDBC, we can virtually connect to any data store
+	- We can connect to multiple database types:
+		- Traditional databases (i.e. PostgreSQL, MySQL, SQL Server, etc.)
+		- Message brokers (i.e. Kafka, Kinesis, etc.)
+		- Distributed databases (i.e. Cassandra, Redshift, etc.)
+		- Data warehouses (i.e. Hive, Azure Cosmos DB, etc.)
+		- File types (i.e. csv, parquet, and avro)
+2. Data validation
+	- We need to validate the data to make sure expected fields are present, expected number of records are present, etc.
+3. Transformation
+	- This step includes applying structure and a schema to our data, so we can transform it into the desired format
+	- Schemas can be applied to tabular data (i.e. csv, relational databases, json, etc.)
+4. Corrupt record handling
+	- Handling bad data, like the following:
+		- Missing and incomplete transformation
+		- Schemas mismatches
+		- DIffering formats or data types
+5. Loading data
+	- A typical design pattern in the Databricks and Spark ecosystem involves loading structured data back to the Databricks File System (DBFS) as a Parquet file
 
 ## References
 - https://docs.microsoft.com/en-us/azure/sql-data-warehouse/design-elt-data-loading
