@@ -47,9 +47,5 @@
 
 ## References
 - https://www.stat.cmu.edu/~cshalizi/350/2008/
-- https://en.wikipedia.org/wiki/K-means_clustering
-
-## References
-- https://www.stat.cmu.edu/~cshalizi/350/2008/
 - http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf
 - https://en.wikipedia.org/wiki/K-means_clustering
