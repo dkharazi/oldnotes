@@ -6,7 +6,7 @@
 - A single process can have one or more threads
 - A single program can have one or more processes
 
-### Implications
+## Implications
 - A single non-hyperthreaded CPU core can execute one single-threaded process at once
 - A single hyperthreaded CPU core can execute two single-threaded processes at once
 - A single hyperthreaded CPU core can execute one double-threaded process at once
