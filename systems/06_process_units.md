@@ -1,10 +1,11 @@
 ## Describing Units
 - A single motherboard can have one or more CPUs
 - A single CPU can have one or more cores
-- A single non-hyperthreaded CPU core can execute a single thread
-- A single hyperthreaded CPU core can execute two threads
+- A single non-hyperthreaded CPU core can execute a single thread at once
+- A single hyperthreaded CPU core can execute two threads at once
 - A single process can have one or more threads
 - A single program can have one or more processes
+- A single non-hyperthreaded CPU core can execute one single-threaded process at once
 
 ## An Example using Chrome
 - One program
