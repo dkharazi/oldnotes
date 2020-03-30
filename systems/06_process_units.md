@@ -5,7 +5,16 @@
 - A single hyperthreaded CPU core can execute two threads at once
 - A single process can have one or more threads
 - A single program can have one or more processes
+
+### Implications
 - A single non-hyperthreaded CPU core can execute one single-threaded process at once
+- A single hyperthreaded CPU core can execute two single-threaded processes at once
+- A single hyperthreaded CPU core can execute one double-threaded process at once
+- Two non-hyperthreaded CPU cores can execute two single-threaded processes at once
+- Two non-hyperthreaded CPU cores can execute one double-threaded process at once
+- Two hyperthreaded CPU cores can execute four single-threaded processes at once
+- Two hyperthreaded CPU cores can execute two double-threaded processes at once
+- Two hyperthreaded CPU cores can execute two single-threaded processes and one double-threaded process at once
 
 ## An Example using Chrome
 - One program
@@ -38,5 +47,6 @@
 - However, the heap is not thread-safe and must be synchronized for thread safety
 
 ## References
+- http://www.math-cs.gordon.edu/courses/cs312/lectures/pdf/usingOS.pdf
 - https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism
 - https://www.quora.com/What-is-the-difference-between-the-thread-of-a-process-and-the-child-of-a-process-What-are-some-real-time-examples
